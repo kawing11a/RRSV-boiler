@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="favicon.png" />
-    <title>[dev] World Class Tests Enrolment Form</title>
+    <title>[dev] RSV Boiler Template</title>
     <script type="text/javascript">
       var envName = "local"; // dev | stg | pro | others are mock env
       var envConfig = createEnvConfig(envName);
@@ -17,28 +17,10 @@
         switch (envName) {
           case "dev":
             return createBaseConfig(
-              "https://wct4apidev.worldclasstests.hk",
-              "https://wct4ossdev.worldclasstests.hk",
+              "",
+              "",
               {
                 ENABLE_REDUX_DEVTOOL: "1", // Redux devTool is very slow, disable it when no need
-              }
-            );
-
-          case "stg":
-            return createBaseConfig(
-              "https://wct4apistg.worldclasstests.hk",
-              "https://wct4ossstg.worldclasstests.hk",
-              {
-                ENABLE_QUESTION_DEBUG: "1",
-              }
-            );
-
-          case "pro":
-            return createBaseConfig(
-              "https://api.worldclasstests.hk",
-              "https://cdn.worldclasstests.hk",
-              {
-                ENABLE_QUESTION_DEBUG: "1",
               }
             );
 
