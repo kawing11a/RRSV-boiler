@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# RRSV - React + Redux + StyledComponet TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
