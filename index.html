@@ -20,7 +20,7 @@
               "",
               "",
               {
-                ENABLE_REDUX_DEVTOOL: "1", // Redux devTool is very slow, disable it when no need
+                ENABLE_REDUX_DEVTOOL: "true", // Redux devTool is very slow, disable it when no need
               }
             );
 
@@ -33,9 +33,6 @@
 
       function createBaseConfig(apiHost, cdnHost, options = {}) {
         const apiBaseURL = apiHost + "/api";
-        const notifyServerHost = apiHost
-          ? apiHost.replace("https", "wss")
-          : "";
 
         return Object.assign(
           {
@@ -44,18 +41,17 @@
             APP_HOME: "/",
             API_BASEURL: apiBaseURL,
             CDN_BASEURL: cdnHost,
-            DEFAULT_LANG: "tc",
+            DEFAULT_LANG: "en",
 
             // stat (production only)
-            ENABLE_GOOGLE_ANALYTICS: "0",
-            ENABLE_FACEBOOK_PIXEL: "0",
+            ENABLE_GOOGLE_ANALYTICS: "false",
+            ENABLE_FACEBOOK_PIXEL: "false",
 
             // misc
-            ENABLE_REDUX_DEVTOOL: "0", // redux devtool is slow! open only when needed!
-            ENABLE_QUESTION_DEBUG: "0",
+            ENABLE_REDUX_DEVTOOL: "false", // redux devtool is slow! open only when needed!
 
             // local dev only
-            API_MOCK: "0", //Api Mock 總開關
+            API_MOCK: "false", // api mocking
           },
           options
         );
